@@ -25,7 +25,7 @@ export default function StacyCharacter() {
         const mesh = obj as THREE.SkinnedMesh;
         const material = new THREE.MeshStandardMaterial({
           map: texture,
-          skinning: true, // ✅ this is valid here for MeshStandardMaterial
+        
         });
         mesh.material = material;
         mesh.castShadow = true;
