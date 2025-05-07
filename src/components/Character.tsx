@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from 'react';
 export default function StacyCharacter() {
   const group = useRef<THREE.Group>(null);
   const soundRef = useRef<THREE.PositionalAudio>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   const { camera } = useThree(); // Needed for audio listener
   const listener = useRef<THREE.AudioListener>(new THREE.AudioListener());
@@ -98,7 +97,7 @@ export default function StacyCharacter() {
     return () => {
       window.removeEventListener('click', handleClick);
     };
-  }, [scene, texture, actions, camera, isPlaying]);
+  }, [scene, texture, actions, camera]);
 
   useFrame(({ pointer }) => {
     const maxRotation = 40;
