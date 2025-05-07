@@ -27,7 +27,7 @@ export default function Projects() {
         </div>
 
         {/* Project: Product Rotation */}
-        <div className="p-4 background-cardshadow-md sm:p-6 bg-opacity-80 rounded-xl">
+        <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
           <h2 className="mb-2 text-xl font-semibold sm:text-2xl">Product Rotation</h2>
           <p className="text-sm sm:text-base">
             Built using SvelteKit: Enables 360° video rotation of products for interactive user experiences.
