@@ -20,11 +20,11 @@
 
 a {
   font-weight: 500;
-  color: #fdc056;
+  color: #537f0c;
   text-decoration: inherit;
 }
 a:hover {
-  color: #c4a31d;
+  color: #a4e33e;
 }
 
 body {
@@ -81,12 +81,12 @@ button:focus-visible {
 }
 
 .nav-link.active {
-  color: #F7A800; /* Active color (orange in this case) */
+  color: #7da43e; /* Active color (orange in this case) */
   font-weight: bold;
 }
 
 .nav-link:hover {
-  color: #F7A800; /* Hover color (orange in this case) */
+  color: #2a3d0b; /* Hover color (orange in this case) */
 }
 
 
@@ -107,13 +107,13 @@ button:focus-visible {
 }
 @keyframes gradientAnimation {
   0% {
-    background: linear-gradient(130deg, #f6c745, #B0BEC5); /* Yellow to Ash */
+    background: linear-gradient(130deg, #dea50a, #B0BEC5); /* Yellow to Ash */
   }
   50% {
-    background: linear-gradient(130deg, #f6c745, #607D8B); /* Slight variation */
+    background: linear-gradient(130deg, #dea50a, #607D8B); /* Slight variation */
   }
   100% {
-    background: linear-gradient(130deg, #f6c745, #B0BEC5); /* Back to Yellow & Ash */
+    background: linear-gradient(130deg, #dea50a, #B0BEC5); /* Back to Yellow & Ash */
   }
 }
 .background-card{

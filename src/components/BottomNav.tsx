@@ -18,7 +18,7 @@ export default function BottomNav() {
           ].map((item) => (
             <motion.div
               key={item.to}
-              className="text-xl text-gray-700 cursor-pointer hover:text-yellow-900"
+              className="text-xl text-gray-700 cursor-pointer hover:text-green-900"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.2 }}
             >
@@ -26,7 +26,7 @@ export default function BottomNav() {
                 to={item.to}
                 smooth={true}
                 duration={500}
-                activeClass="text-yellow-700 font-semibold"
+                activeClass="text-green-700 font-semibold"
                 className="px-2"
               >
                 {item.label}

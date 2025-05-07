@@ -8,8 +8,7 @@ export default function App() {
       style={{
         height: '100vh',
         width: '100vw', // Ensures the full width is used
-        background: 'linear-gradient(135deg, #7da43e, #a7e64c)', // Yellow and Ash gradient
-        animation: 'gradientAnimation 10s ease infinite', // Adding animation to the gradient
+        background: 'linear-gradient(135deg, #7da43e, #B0BEC5)',
         position: 'relative',
       }}
     >

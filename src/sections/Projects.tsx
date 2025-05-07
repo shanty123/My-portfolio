@@ -3,8 +3,7 @@ export default function Projects() {
     <div
       className="min-h-screen px-4 py-12 sm:px-8"
       style={{
-        background: 'linear-gradient(135deg, #FFEB3B, #B0BEC5)',
-        animation: 'gradientAnimation 10s ease infinite',
+        background: 'linear-gradient(135deg, #7da43e, #B0BEC5)',
       }}
     >
       <h1 className="mb-8 text-3xl font-bold text-center sm:text-4xl">Projects and Publications</h1>

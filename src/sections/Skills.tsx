@@ -1,45 +1,45 @@
 export default function Skills() {
-    const skills = [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React.js',
-      'Svelte.js',
-      'Sveltekit',
-      'Node.js',
-      'Express',
-      'MongoDB',
-      'DynamoDB',
-      'Google Analytics',
-      'Conviva',
-      'Bitbuckect',
-      'Tailwind CSS',
-      'Git & GitHub',
-      'Figma',
-      'AWS',
-      'Slack',
-      'Notion'
-    ];
-  
-    return (
-      <div className="px-8 py-12 bamin-h-screen"  style={{
-        height: '100vh',
-        background: 'linear-gradient(135deg, #FFEB3B, #B0BEC5)', // Yellow and Ash gradient
-        animation: 'gradientAnimation 10s ease infinite', // Adding animation to the gradient
-      }}>
-        <h1 className="mb-8 text-4xl font-bold text-center">Skills</h1>
-  
-        <div className="grid max-w-3xl grid-cols-2 gap-4 mx-auto sm:grid-cols-3 md:grid-cols-4">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="py-3 font-semibold text-center transition duration-300 shadow-md background-card bacx-4 rounded-xl text-md hover:shadow-lg"
-            >
-              {skill}
-            </div>
-          ))}
-        </div>
+  const skills = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React.js',
+    'Svelte.js',
+    'Sveltekit',
+    'Node.js',
+    'Express',
+    'MongoDB',
+    'DynamoDB',
+    'Google Analytics',
+    'Conviva',
+    'Bitbuckect',
+    'Tailwind CSS',
+    'Git & GitHub',
+    'Figma',
+    'AWS',
+    'Slack',
+    'Notion'
+  ];
+
+  return (
+    <div
+      className="min-h-screen px-4 py-8"
+      style={{
+        background: 'linear-gradient(135deg, #7da43e, #B0BEC5)',
+      }}
+    >
+      <h1 className="mb-8 text-3xl font-bold text-center sm:text-4xl">Skills</h1>
+
+      <div className="grid max-w-4xl grid-cols-1 gap-4 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="px-2 py-3 font-semibold text-center transition duration-300 shadow-md background-card text-md rounded-xl hover:shadow-lg"
+          >
+            {skill}
+          </div>
+        ))}
       </div>
-    );
-  }
-  
+    </div>
+  );
+}

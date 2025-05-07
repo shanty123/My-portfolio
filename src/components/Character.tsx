@@ -1,10 +1,18 @@
 import { useGLTF, useAnimations, useTexture } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function StacyCharacter() {
   const group = useRef<THREE.Group>(null);
+  const soundRef = useRef<THREE.PositionalAudio>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const { camera } = useThree(); // Needed for audio listener
+  const listener = useRef<THREE.AudioListener>(new THREE.AudioListener());
+  const audioLoader = useRef(new THREE.AudioLoader());
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2();
 
   const { scene, animations } = useGLTF(
     'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/stacy_lightweight.glb'
@@ -20,13 +28,60 @@ export default function StacyCharacter() {
   const spine = useRef<THREE.Bone | null>(null);
 
   useEffect(() => {
+    camera.add(listener.current);
+
+    // Create and load the positional audio
+    const sound = new THREE.PositionalAudio(listener.current);
+    soundRef.current = sound;
+
+    audioLoader.current.load(
+      '/audio.mp3',  // Path to the audio file
+      (buffer) => {
+        console.log('Audio loaded successfully');
+        sound.setBuffer(buffer);
+        sound.setRefDistance(10);  // Adjust as necessary
+        sound.setVolume(1);
+      },
+      undefined,
+      (error) => {
+        console.error('Error loading audio: ', error);
+      }
+    );
+
+    if (group.current) {
+      group.current.add(sound);
+    }
+    const handleClick = (event: MouseEvent) => {
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    
+      raycaster.setFromCamera(mouse, camera);
+    
+      const intersects = raycaster.intersectObject(group.current!, true); // `true` for recursive check
+    
+      if (intersects.length > 0) {
+        console.log('Avatar clicked!');
+        const sound = soundRef.current;
+    
+        if (sound && sound.buffer && !sound.isPlaying) {
+          sound.play();
+          console.log('Audio is playing');
+        } else if (sound?.isPlaying) {
+          sound.stop();
+          console.log('Audio stopped');
+        }
+      }
+    };
+    
+
+    // Add the click event listener
+    window.addEventListener('click', handleClick);
+
+    // Material & bone setup
     scene.traverse((obj) => {
       if ((obj as THREE.SkinnedMesh).isSkinnedMesh) {
         const mesh = obj as THREE.SkinnedMesh;
-        const material = new THREE.MeshStandardMaterial({
-          map: texture,
-        
-        });
+        const material = new THREE.MeshStandardMaterial({ map: texture });
         mesh.material = material;
         mesh.castShadow = true;
         mesh.receiveShadow = true;
@@ -39,7 +94,11 @@ export default function StacyCharacter() {
     });
 
     actions.idle?.play();
-  }, [scene, texture, actions]);
+
+    return () => {
+      window.removeEventListener('click', handleClick);
+    };
+  }, [scene, texture, actions, camera, isPlaying]);
 
   useFrame(({ pointer }) => {
     const maxRotation = 40;

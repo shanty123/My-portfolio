@@ -5,8 +5,7 @@ export function About() {
     <div
       className="flex flex-col items-center justify-center min-h-screen px-8 py-12"
       style={{
-        background: 'linear-gradient(135deg, #FFEB3B, #B0BEC5)', // Yellow and Ash gradient
-        animation: 'gradientAnimation 10s ease infinite', // Adding animation to the gradient
+        background: 'linear-gradient(135deg, #7da43e, #B0BEC5)', // Yellow and Ash gradient
       }}
     >
       <h1 className="mb-8 text-4xl font-bold text-center text-white">About Me</h1>
