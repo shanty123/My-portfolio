@@ -1,59 +1,66 @@
 export default function Projects() {
   return (
-    <div className="min-h-screen px-8 py-12"  style={{
-      height: '100vh',
-      background: 'linear-gradient(135deg, #FFEB3B, #B0BEC5)', // Yellow and Ash gradient
-      animation: 'gradientAnimation 10s ease infinite', // Adding animation to the gradient
-    }}>
-      <h1 className="mb-8 text-4xl font-bold text-center">Projects and Publications</h1>
+    <div
+      className="min-h-screen px-4 py-12 sm:px-8"
+      style={{
+        background: 'linear-gradient(135deg, #FFEB3B, #B0BEC5)',
+        animation: 'gradientAnimation 10s ease infinite',
+      }}
+    >
+      <h1 className="mb-8 text-3xl font-bold text-center sm:text-4xl">Projects and Publications</h1>
 
       <div className="max-w-3xl mx-auto space-y-6">
-        
-        <div className="p-6 shadow background-card rounded-xl">
-          <h2 className="mb-2 text-2xl font-semibold">News Recommendation System</h2>
-          <p >Python (Flask) and React.js : The main aim of my system is to help users to filter similar news articles in a
-personalized way.</p>
+        {/* Project: News Recommendation System */}
+        <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
+          <h2 className="mb-2 text-xl font-semibold sm:text-2xl">News Recommendation System</h2>
+          <p className="text-sm sm:text-base">
+            Built with Python (Flask) and React.js. This system helps users filter similar news articles in a personalized way.
+          </p>
         </div>
 
-        <div className="p-6 shadow background-card rounded-xl">
-          <h2 className="mb-2 text-2xl font-semibold">Fake News Detection</h2>
-          <p>Machine learning using python (Flask) : to detect fake and real news I choose naïve bayes algorithm and TFIDF
-method in this model. Flask is used to deploy the model.</p>
-          
+        {/* Project: Fake News Detection */}
+        <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
+          <h2 className="mb-2 text-xl font-semibold sm:text-2xl">Fake News Detection</h2>
+          <p className="text-sm sm:text-base">
+            Machine Learning with Flask using Naïve Bayes and TF-IDF for classifying real vs. fake news. Deployed via Flask.
+          </p>
         </div>
-        <div className="p-6 shadow background-card rounded-xl">
-          <h2 className="mb-2 text-2xl font-semibold">Product Rotation</h2>
-          <p>SvelteKit: Implement a 360-degree rotation of the product video, starting at 0 degrees and ending at 360
-degrees, allowing users to explore the product interactively.</p>
+
+        {/* Project: Product Rotation */}
+        <div className="p-4 background-cardshadow-md sm:p-6 bg-opacity-80 rounded-xl">
+          <h2 className="mb-2 text-xl font-semibold sm:text-2xl">Product Rotation</h2>
+          <p className="text-sm sm:text-base">
+            Built using SvelteKit: Enables 360° video rotation of products for interactive user experiences.
+          </p>
         </div>
-        <div className="p-6 shadow background-card rounded-xl">
-          <h2 className="mb-2 text-2xl font-semibold">Publications</h2>
-          <ul className="mt-3 list-disc list-inside">
-          <li>
-     
-      <a
-        href="https://medium.com/swlh/news-recommendation-system-a8efde3cb233"
-        className="text-yellow-600 break-all hover:underline"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        News Recommendation System
-      </a>
-    </li>
-    <li>
-     
-     <a
-       href="https://medium.com/swlh/recommendation-system-for-daily-life-63db634673a1"
-       className="text-yellow-600 break-all hover:underline hover-text-orange-600"
-       target="_blank"
-       rel="noopener noreferrer"
-     >
-     Recommendations System For Daily Life
-     </a>
-   </li>
-             </ul>
+
+        {/* Publications */}
+        <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
+          <h2 className="mb-2 text-xl font-semibold sm:text-2xl">Publications</h2>
+          <ul className="mt-3 space-y-2 text-sm list-disc list-inside sm:text-base">
+            <li>
+              <a
+                href="https://medium.com/swlh/news-recommendation-system-a8efde3cb233"
+                className="text-yellow-700 underline break-words hover:text-orange-600"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                News Recommendation System
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://medium.com/swlh/recommendation-system-for-daily-life-63db634673a1"
+                className="text-yellow-700 underline break-words hover:text-orange-600"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Recommendation System For Daily Life
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  )
+  );
 }

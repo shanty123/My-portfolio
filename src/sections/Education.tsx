@@ -1,37 +1,45 @@
 export default function Education() {
-    return (
-      <div className="min-h-screen px-8 py-12 "  style={{
-        height: '100vh',
-        background: 'linear-gradient(135deg, #FFEB3B, #B0BEC5)', // Yellow and Ash gradient
-        animation: 'gradientAnimation 10s ease infinite', // Adding animation to the gradient
-      }}>
-        <h1 className="mb-8 text-4xl font-bold text-center">Education</h1>
-  
-        <div className="max-w-3xl mx-auto space-y-6" >
-          
-          <div className="p-6 shadow rounded-xl background-card">
-            <h2 className="mb-2 text-2xl font-semibold">Msc. in Data Analytics</h2>
-            <p >Dublin Buisness School,Dublin,Ireland • 2022 – 2023</p>
-          </div>
+  return (
+    <div
+      className="min-h-screen px-4 py-12 sm:px-8"
+      style={{
+        background: 'linear-gradient(135deg, #FFEB3B, #B0BEC5)',
+        animation: 'gradientAnimation 10s ease infinite',
+      }}
+    >
+      <h1 className="mb-8 text-3xl font-bold text-center sm:text-4xl">Education</h1>
 
-          <div className="p-6 shadow rounded-xl background-card">
-            <h2 className="mb-2 text-2xl font-semibold">Masters in Computer Applications</h2>
-            <p >Marian College Kuttikanam,Kerala,India • 2019 – 2021</p>
-            <ul className="mt-3 list-disc list-inside">
-              <li>Graduated with 8.1 GPA</li>
-             
-            </ul>
-          </div>
-          <div className="p-6 shadow rounded-xl background-card">
-            <h2 className="mb-2 text-2xl font-semibold">Bachelors in Computer Applications</h2>
-            <p >MC Varghese college of arts and science,Kerala,India • 2016 – 2019</p>
-            <ul className="mt-3 list-disc list-inside">
-              <li>Graduated with 8.6 GPA</li>
-             
-            </ul>
-          </div>
+      <div className="max-w-3xl mx-auto space-y-6">
+        {/* MSc. in Data Analytics */}
+        <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
+          <h2 className="mb-2 text-xl font-semibold sm:text-2xl">MSc. in Data Analytics</h2>
+          <p className="text-sm sm:text-base">
+            Dublin Business School, Dublin, Ireland • 2022 – 2023
+          </p>
+        </div>
+
+        {/* Masters in Computer Applications */}
+        <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
+          <h2 className="mb-2 text-xl font-semibold sm:text-2xl">Masters in Computer Applications</h2>
+          <p className="text-sm sm:text-base">
+            Marian College Kuttikanam, Kerala, India • 2019 – 2021
+          </p>
+          <ul className="mt-3 space-y-1 text-sm list-disc list-inside sm:text-base">
+            <li>Graduated with 8.1 GPA</li>
+          </ul>
+        </div>
+
+        {/* Bachelors in Computer Applications */}
+        <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
+          <h2 className="mb-2 text-xl font-semibold sm:text-2xl">Bachelors in Computer Applications</h2>
+          <p className="text-sm sm:text-base">
+            MC Varghese College of Arts and Science, Kerala, India • 2016 – 2019
+          </p>
+          <ul className="mt-3 space-y-1 text-sm list-disc list-inside sm:text-base">
+            <li>Graduated with 8.6 GPA</li>
+          </ul>
         </div>
       </div>
-    )
-  }
-  
+    </div>
+  );
+}

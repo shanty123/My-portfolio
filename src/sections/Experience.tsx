@@ -1,59 +1,56 @@
+
 export default function Experience() {
     return (
-      <div className="min-h-screen px-8 py-12"  style={{
-        height: '100vh',
-        background: 'linear-gradient(135deg, #FFEB3B, #B0BEC5)', // Yellow and Ash gradient
-        animation: 'gradientAnimation 10s ease infinite', // Adding animation to the gradient
-      }}>
-        <h1 className="mb-8 text-4xl font-bold text-center">Work Experience</h1>
+      <div
+        className="min-h-screen px-4 py-12 sm:px-8"
+        style={{
+          background: 'linear-gradient(135deg, #FFEB3B, #B0BEC5)',
+          animation: 'gradientAnimation 10s ease infinite',
+        }}
+      >
+        <h1 className="mb-8 text-3xl font-bold text-center sm:text-4xl">Work Experience</h1>
   
         <div className="max-w-3xl mx-auto space-y-6">
-          
-          <div className="p-6 shadow background-card rounded-xl">
-            <h2 className="mb-2 text-2xl font-semibold">Web Developer</h2>
-            <p >Axonista pvt Ltd(Working from home) • March 2024 – present</p>
-            <ul className="mt-3 list-disc list-inside">
+          {/* Axonista Experience */}
+          <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
+            <h2 className="mb-2 text-xl font-semibold sm:text-2xl">Web Developer</h2>
+            <p className="text-sm sm:text-base">
+              Axonista Pvt Ltd (Remote) • March 2024 – Present
+            </p>
+            <ul className="mt-3 space-y-1 text-sm list-disc list-inside sm:text-base">
               <li>
-Deployed apps across platforms including Samsung (Tizen), Vizio, and Comcast, ensuring smooth navigation,
-video performance, and consistent UI across screen sizes.
-</li>
-<li>
-Led the MVP web development for a white-label sports streaming platform in partnership with Independence
-Sports Management (ISM), initially designed for MLB’s Texas Rangers.
-</li><li>
-Developed and integrated a secure Stripe-based subscription and payment system, enabling card
-management, plan handling, and email automation.
-</li>
-<li>
-Designed and built user-centric components for signing up, viewing live games, accessing replays, browsing
-player stats, and shopping for merchandise optimized for both TVs and mobile devices</li>
-             
+                Deployed apps across platforms including Samsung (Tizen), Vizio, and Comcast, ensuring smooth navigation and consistent UI.
+              </li>
+              <li>
+                Led MVP development for a white-label sports streaming platform with ISM, designed for MLB’s Texas Rangers.
+              </li>
+              <li>
+                Integrated Stripe-based subscription/payment system with automation and plan handling.
+              </li>
+              <li>
+                Built user-centric components for signup, live game views, replays, stats, and mobile/TV shopping experiences.
+              </li>
             </ul>
           </div>
-
-          <div className="p-6 shadow background-card rounded-xl">
-            <h2 className="mb-2 text-2xl font-semibold">Software Developer</h2>
-            <p >RecodeAI Solutions Muvattupuzha,Kerala,India • 2 years</p>
-            <ul className="mt-3 list-disc list-inside">
-              <li>Designed UI components, coded interfaces, improved UX, boosting user satisfaction.
-                </li><li>
-Developed backend APIs, implemented prototypes, ensuring seamless app functionality.
-</li>
-<li>
-Utilized Node.js, Express, MongoDB, delivering reliable software solutions.
-</li><li>
-Debugged code, architected front-end, enhancing app reliability and efficiency.
-</li>
-Adapted to fast-paced environments, consistently meeting deadlines.
-<li>
-Proficient with modern JavaScript frameworks, including React.js and its workflows such as Redux and Flux,
-with a strong emphasis on maintainable and scalable code structures</li>
-             
+  
+          {/* RecodeAI Experience */}
+          <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
+            <h2 className="mb-2 text-xl font-semibold sm:text-2xl">Software Developer</h2>
+            <p className="text-sm sm:text-base">
+              RecodeAI Solutions, Kerala, India • 2 Years
+            </p>
+            <ul className="mt-3 space-y-1 text-sm list-disc list-inside sm:text-base">
+              <li>Designed UI components and improved UX, boosting user satisfaction.</li>
+              <li>Developed backend APIs and implemented functional prototypes.</li>
+              <li>Used Node.js, Express, and MongoDB to deliver scalable backend services.</li>
+              <li>Enhanced reliability and efficiency through front-end architecture and debugging.</li>
+              <li>
+                Proficient in React.js with Redux/Flux, focusing on maintainable and scalable codebases.
+              </li>
             </ul>
           </div>
-         
         </div>
       </div>
-    )
+    );
   }
   
