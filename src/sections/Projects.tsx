@@ -7,7 +7,6 @@ export default function Projects() {
       }}
     >
       <h1 className="mb-8 text-3xl font-bold text-center sm:text-4xl">Projects and Publications</h1>
-
       <div className="max-w-3xl mx-auto space-y-6">
         {/* Project: News Recommendation System */}
         <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
