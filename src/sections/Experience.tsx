@@ -14,7 +14,7 @@ export default function Experience() {
           <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
             <h2 className="mb-2 text-xl font-semibold sm:text-2xl">Web Developer</h2>
             <p className="text-sm sm:text-base">
-              Axonista Pvt Ltd (Remote) • March 2024 – Present
+              Axonista Pvt Ltd (Remote) • March 2024 – June 2025
             </p>
             <ul className="mt-3 space-y-1 text-sm list-disc list-inside sm:text-base">
               <li>
@@ -36,7 +36,7 @@ export default function Experience() {
           <div className="p-4 shadow-md background-card sm:p-6 bg-opacity-80 rounded-xl">
             <h2 className="mb-2 text-xl font-semibold sm:text-2xl">Software Developer</h2>
             <p className="text-sm sm:text-base">
-              RecodeAI Solutions, Kerala, India • 2 Years
+              RecodeAI Solutions, Kerala, India • August 2020 - August 2022
             </p>
             <ul className="mt-3 space-y-1 text-sm list-disc list-inside sm:text-base">
               <li>Designed UI components and improved UX, boosting user satisfaction.</li>
@@ -44,7 +44,7 @@ export default function Experience() {
               <li>Used Node.js, Express, and MongoDB to deliver scalable backend services.</li>
               <li>Enhanced reliability and efficiency through front-end architecture and debugging.</li>
               <li>
-                Proficient in React.js with Redux/Flux, focusing on maintainable and scalable codebases.
+                Proficient in React.js with Redux, focusing on maintainable and scalable codebases.
               </li>
             </ul>
           </div>

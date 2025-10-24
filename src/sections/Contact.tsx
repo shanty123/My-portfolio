@@ -1,3 +1,5 @@
+import { SpriteAnimator } from "@react-three/drei";
+
 export default function Contact() {
   return (
     <div
@@ -35,9 +37,9 @@ export default function Contact() {
           {/* Location */}
           <div className="flex items-start gap-2">
             <span className="font-semibold whitespace-nowrap">📍 Location:</span>
-            <address className="not-italic break-words">
-              31 Mariavilla Woods, Mariavilla, Maynooth, Kildare, W23 Y01X
-            </address>
+            <span className="not-italic break-words">
+              45 Priory Quay, Priory Lane, New Ross, Wexford, Y34HT22
+            </span>
           </div>
         </div>
       </div>
