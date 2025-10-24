@@ -10,7 +10,7 @@ export default function Hero() {
           "I'm Shanty 👋",
           2000,
           '',
-          "Frontend Developer 👩‍💻",
+          "Web Developer 👩‍💻",
           2000,
           '',
         ]}
@@ -21,10 +21,13 @@ export default function Hero() {
       />
 
       <p className="max-w-sm px-2 mx-auto mt-6 text-sm leading-relaxed text-center sm:max-w-md sm:text-md sm:px-0">
-        🚀 I'm a Frontend Developer with over 3 years of experience, passionate about crafting
-        user-centric and performance-driven web solutions. I love turning complex ideas into seamless,
-        intuitive experiences. Outside of work, I'm always exploring new tools and techniques to stay
-        ahead in the fast-paced world of frontend development. 🌟
+        🚀I’m a Web Developer with 3+ years of experience creating high-performance, 
+          scalable web apps using React, TypeScript, and JavaScript. 
+          I focus on crafting clean, efficient, and intuitive user experiences 
+          and I’m passionate about continuous learning, collaboration,
+          and writing maintainable code that makes an impact. Outside of work,
+          I'm always exploring new tools and techniques to stay
+          ahead in the fast-paced world of Software development. 🌟
       </p>
     </div>
   );
