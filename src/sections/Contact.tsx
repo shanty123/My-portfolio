@@ -1,5 +1,3 @@
-import { SpriteAnimator } from "@react-three/drei";
-
 export default function Contact() {
   return (
     <div
